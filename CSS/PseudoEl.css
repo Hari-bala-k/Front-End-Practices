@@ -1,0 +1,30 @@
+p::before {
+    content: "Start :";
+    color:brown;
+}
+p::after {
+    content: "- The End ";
+    color: green;
+}
+p::first-line {
+    background-color: aquamarine;
+}
+p::first-letter{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: black;
+}
+input::placeholder {
+    color: blueviolet;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: azure;
+    font-weight: 100;
+}
+p::selection{
+    color: red;
+    background-color: yellow;
+}
+li::marker{
+    color: blueviolet;
+    stroke-width: 2px;
+}
