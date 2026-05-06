@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container {
+            background-color: antiquewhite;
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 100px 1fr 2fr 2fr;
+            grid-template-rows: 4fr 4fr;
+            padding: 20px;
+            margin-bottom:20px ;
+        }
+        .item {
+          width: 100px;
+          height: 100px;
+          background-color: aqua;
+        }
+        .grid-container1 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas:
+            "header header "
+            "spread content"
+            "footer footer";
+        }
+        .header{
+            grid-area: header;
+            background-color: blueviolet;
+            padding: 20px;
+        }
+         .spread{
+            grid-area: spread;
+            background-color: rgb(198, 108, 18);
+            padding: 20px;
+        }
+        .content{
+            grid-area: content;
+            background-color: green;
+            padding: 20px;
+        }
+        .footer{
+            grid-area: footer;
+            background-color: cadetblue;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item">one</div>
+        <div class="item">two</div>
+        <div class="item">three</div>
+        <div class="item">four</div>
+        <div class="item">five</div>
+        <div class="item">six</div>
+        <div class="item">seven</div>
+        <div class="item">eight</div>
+    </div>
+
+     <div class="grid-container1">
+       <div class="header">header</div>
+       <div class="spread">spread</div>
+       <div class="content">content</div>
+       <div class="footer">footer</div>
+    </div>
+</body>
+</html>
