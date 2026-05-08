@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+       .box{
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+       }
+         @media (max-width: 600px) and (min-width: 300px) {
+           body{
+            background-color: rgb(29, 239, 10);
+            color: lightgray;
+           }
+          .box{
+                background-color: red;
+          }
+         }
+        @media(min-width:200px) and (max-width:400px){
+            body {
+                background-color: black;
+                color: white;
+            }
+            .box{
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>This is practice of Media Queries</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur perspiciatis ducimus cupiditate non voluptatum nobis id? Enim doloremque reprehenderit ipsam alias eaque, quia laboriosam sunt dolore beatae voluptates facere magnam!</p>
+    <div class="box"></div>
+</body>
+</html>
