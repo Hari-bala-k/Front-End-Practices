@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+        }
+        nav ul {
+            display: flex;
+            justify-content: end;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero {
+            background-color: #f4f4f4;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .content {
+            display: flex;
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        article {
+            flex: 1;
+        }
+
+        aside {
+            flex: 0 0 200px;
+            background-color: #e0e0e0;
+            padding: 1rem;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>My Website</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Main Content</h2>
+            <p>This is the main content area.</p>
+        </section>
+        <section class="content">
+            <article>
+                <h3>Article Title</h3>
+                <p>This is an article within the main content area.</p>
+            </article>
+            <article>
+                <h3>Another Article</h3>
+                <p>This is another article within the main content area.</p>
+            </article>
+            <article>
+                <h3>Yet Another Article</h3>
+                <p>This is yet another article within the main content area.</p>
+            </article>
+            <aside>
+                <h3>Sidebar</h3>
+                <p>This is the sidebar content.</p>
+            </aside>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
