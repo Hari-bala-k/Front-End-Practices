@@ -9,8 +9,28 @@
         height: 100px;
         background-color: #3fccd1;
         border: 2px solid rgb(223, 112, 2);
-    }
+         }
+        
+         #stick {
+            position: sticky;
+            top: 0;
+            background-color: rgb(232, 213, 3);
+            padding: 1rem;
+            border: 2px solid brown;
+            border-radius: 10px;
+         }
 
+            .fixed {
+                width: 20px;
+                height: 20px;
+                position: fixed;
+                bottom: 0px;
+                right: 0px;
+                background-color: rgb(28, 235, 14);
+                padding: 1rem;
+                border: 2px solid brown;
+                border-radius: 10px;
+            }
         #parent {
             position: relative;
             width: 300px;
@@ -28,12 +48,55 @@
             height: 100px;
             background-color: rgb(232, 213, 3);
         }
+            .b_box {
+                z-index: 3;
+                margin-top: 160%;
+                position: absolute;
+                top: 50px;
+                left: 50px;
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+            }
+    
+            .y_box {
+                z-index: 2;
+                margin-top: 160%;
+                position: absolute;
+                top: 70px;
+                left: 70px;
+                width: 100px;
+                height: 100px;
+                background-color: yellow;
+            }
+    
+            .g_box {
+                z-index: 1;
+                margin-top: 160%;
+                position: absolute;
+                top: 90px;
+                left: 90px;
+                width: 100px;
+                height: 100px;
+                background-color: green;
+            }
     </style>
 </head>
 <body>
+    <h1>Sticky and fixed positioning</h1>
+    <p id="stick">This is a simple example of sticky positioning.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium nisi exercitationem, cupiditate asperiores non id, earum mollitia est odit blanditiis voluptate sapiente eveniet nam enim ea minima itaque eius ut!</p> <br>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium nisi exercitationem, cupiditate asperiores non id, earum mollitia est odit blanditiis voluptate sapiente eveniet nam enim ea minima itaque eius ut!</p> <br>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium nisi exercitationem, cupiditate asperiores non id, earum mollitia est odit blanditiis voluptate sapiente eveniet nam enim ea minima itaque eius ut!</p> <br> <br>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium nisi exercitationem, cupiditate asperiores non id, earum mollitia est odit blanditiis voluptate sapiente eveniet nam enim ea minima itaque eius ut!</p> <br>
+ <div class="fixed"></div>
     <div></div>
     <div id="parent">
         <div id="child"></div>
     </div>
+     <h2>Z - index used for overlapping</h2>
+    <div class="b_box"></div>
+    <div class="y_box"></div>
+    <div class="g_box"></div>
 </body>
 </html>
