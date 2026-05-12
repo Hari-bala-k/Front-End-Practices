@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: slid-showR;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            border-radius: 50px;
+            border: 10px ridge black;
+            box-sizing:border-box;
+        }
+          .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: slid-showT;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            border-radius: 50px;
+            border: 10px double black;
+            box-sizing: border-box;
+        }
+        @keyframes slid-showR {
+            0% {
+                background-color: red;
+                transform: translateX(0);
+            }
+            50% {
+                background-color: blue;
+                transform: translatex(1000px);
+            }
+            100% {
+                background-color: red;
+                transform: translateX(0);
+            }
+        }
+          @keyframes slid-showT {
+            0% {
+                background-color: rgb(211, 2, 148);
+                transform: translateX(0);
+            }
+            50% {
+                background-color: rgb(7, 234, 10);
+                transform: translateY(1000px);
+            }
+            100% {
+                background-color: rgb(252, 6, 235);
+                transform: translateX(0);
+            }
+         }
+         div{
+             margin: 20px;
+         }
+    </style>
+</head>
+<body>
+    <div>This the example of animation</div>
+    <div class="box">
+    </div>
+    <div class="box2">
+    </div>
+</body>
+</html>
