@@ -1,6 +1,6 @@
 var a = 10;
 console.log(a); 
-var a = 20; // Redeclaring 'a' is allowed with 'var', and it will overwrite the previous value.
+var a = 20; // Redeclaring 'a' is allowed with 'var', and it will overwrite the previous value
 console.log(a);
 
 let b =10;
