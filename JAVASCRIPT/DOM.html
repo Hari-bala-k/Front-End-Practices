@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Example</title>
+</head>
+<body>
+    <h1>DOM Example</h1>
+    
+    <p id="demo">This is a paragraph. using getElementById()</p>
+    <p>This is a simple paragraph. using getElementByTagName()</p>
+    <p class="example">This is another paragraph. using getElementByClassName()</p>
+    <p name="thirdPara">This is a third paragraph. using getElementByName()</p>
+
+    <h3>DOM Example Using querySelectorAll</h3>
+    <h3> DOM Example Using querySelectorAll</h3>
+    
+    <button onclick="change()"> Change Styles</button>
+    <br>
+    <br>
+    <input type="text" placeholder="Enter your name" name="favhero">
+    <button onclick="displayInput()">click me</button>
+    <p id="output">Output will be displayed here</p>
+
+    <script>
+        // Accessing elements using getElementById
+        let varId = document.getElementById("demo");
+        varId.style.fontWeight = "bold";
+        varId.style.fontSize = "25px";
+        
+        function change(){
+        // Accessing elements using getElementByTagName
+        let varClass = document.getElementsByTagName("p");
+
+        for (let i = 0; i < varClass.length; i++) {
+            varClass[i].style.color = "purple";
+            varClass[i].style.fontSize = "20px";
+            varClass[i].style.backgroundColor = "lightgray";
+        }
+
+        // Accessing elements using getElementByClassName
+        let varClassName = document.getElementsByClassName("example");
+
+        for (let i = 0; i < varClassName.length; i++) {
+            varClassName[i].style.color = "green";
+            varClassName[i].style.fontSize = "22px";
+            varClassName[i].style.backgroundColor = "lightblue";
+        }
+        // Accessing elements using getElementByName
+        let varName = document.getElementsByName("thirdPara");
+
+        for(let i = 0; i < varName.length; i++) {
+            varName[i].style.color = "blue";
+            varName[i].style.fontSize = "18px";
+            varName[i].style.backgroundColor = "lightyellow";
+        }
+
+                // Accessing elements using querySelector
+                
+        let varQuery = document.querySelector("h1");
+        varQuery.innerText = "DOM Example Using javascript - innerText";
+        varQuery.innerHTML = "<i> <b>DOM Example Using javascript</b> </i> - innerHTML";
+     // varQuery.textContent = "DOM Example Using javascript - textContent";
+        varQuery.style.color = "red";
+
+
+    // Accessing elements using querySelectorAll
+    let varQueryAll = document.querySelectorAll("h3");
+    varQueryAll.forEach( element =>{
+        element.style.color = "white";
+        element.style.backgroundColor = "black";
+    });
+  } 
+
+    // Function to display input value
+    function displayInput(){
+       let heroname = document.getElementsByName("favhero")[0].value;
+       let output = document.getElementById("output").textContent = "Your favorite hero is: " + heroname;
+   }
+    </script>
+
+</body>
+</html>
