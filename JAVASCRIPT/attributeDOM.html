@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attribute DOM </title>
+</head>
+<body>
+    <h1>DOM attribute Example</h1>
+
+    <a href="https://app.kodnest.com/my-learning/class/199ec5c6-523f-41a5-b5f9-7cb3612ff24f/module/f12f7b58-f29d-4d61-aae8-3b0495163fa4/topic/172ae57c-92b0-4987-8d4f-699cf123cf39/sub-topic/7b9d8ed5-1691-4301-8b49-c2b3904433e9/layout/1/content">Visit Kodnest</a>
+    <br>
+    <br>
+    <button onclick="changeAttribute()">Change Attribute</button>
+    <button onclick="getAttribute()">Get Attribute</button>
+    <button onclick="removeAttribute()">Remove Attribute</button>
+     
+    <script>
+        let link = document.querySelector("a");
+        function changeAttribute() {
+            link.setAttribute("href", "https://www.google.com");
+            link.textContent = "Visit Google";
+        }
+
+        function getAttribute() {
+            let hrefValue = link.getAttribute("href");
+            alert("The href attribute value is: " + hrefValue);
+        }
+
+        function removeAttribute() {
+            link.removeAttribute("href");
+            alert("The href attribute has been removed.");
+        }
+    </script>
+    
+</body>
+</html>
