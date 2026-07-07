@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class List</title>
+</head>
+<body>
+    <h1>Class List Example</h1>
+    <p id="demo">This is a paragraph.</p>
+    <button onclick="addClass()">Add Class</button>
+    <button onclick="removeClass()">Remove Class</button>
+    <button onclick="toggleClass()">Toggle Class</button>
+    <button onclick="containsClass()">Check Class</button>
+    <script>
+        let demoElement = document.getElementById("demo");
+
+        function addClass() {
+            demoElement.classList.add("highlight");
+        }
+
+        function removeClass() {
+            demoElement.classList.remove("highlight");
+        }
+
+        function toggleClass() {
+            demoElement.classList.toggle("highlight");
+        }
+        function containsClass() {
+            if (demoElement.classList.contains("highlight")) {
+                alert("The element has the 'highlight' class.");
+            } else {
+                alert("The element does not have the 'highlight' class.");
+            }
+        }
+
+    </script>
+
+    <style>
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</body>
+</html>
