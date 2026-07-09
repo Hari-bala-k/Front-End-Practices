@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Types</title>
+    <style>
+        div {
+            height: 100px;
+            width: 100px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+     <h2>Events Types</h2>
+     <div></div>
+     
+     <form action="">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <br><br>
+        <button type="submit">Submit</button>
+     </form>
+     <script>
+        const box = document.querySelector('div');
+        // mouse events
+        box.addEventListener('click', () => {
+            box.style.backgroundColor = 'lightgreen';
+        });
+
+        box.addEventListener('dblclick', () => {
+            box.style.backgroundColor = 'lightcoral';
+        });
+
+        box.addEventListener('mouseover', () => {
+            box.style.backgroundColor = 'lightyellow';
+        });
+
+        box.addEventListener('mouseout', () => {
+            box.style.backgroundColor = 'lightblue';
+        });
+
+        box.addEventListener('mousemove', (e) => {
+            box.textContent = `X: ${e.offsetX}, Y: ${e.offsetY}`;
+        });
+
+        // keyboard events
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'r') {
+                box.style.backgroundColor = 'lightcoral';
+            } else if (e.key === 'g') {
+                box.style.backgroundColor = 'lightgreen';
+            } else if (e.key === 'b') {
+                box.style.backgroundColor = 'blue';
+            }
+        });
+        document.addEventListener('keyup', (e) => {
+            if (e.key === 'r' || e.key === 'g' || e.key === 'b') {
+                box.style.backgroundColor = 'lightblue';
+            }
+        });
+        
+        // form events
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert(`Name: ${form.name.value}, Email: ${form.email.value} Submitted!`);
+        });
+        const nameInput = document.querySelector('#name');
+
+       nameInput.addEventListener('focus',(event) =>{
+           console.log('Input field focused');
+        });
+
+        nameInput.addEventListener('blur',(event) =>{
+            console.log('Input field blurred');
+        });
+         
+        nameInput.addEventListener('input',(event) =>{
+            console.log(`Current input value: ${event.target.value}`);
+        });
+
+        nameInput.addEventListener('change',(event) =>{
+            console.log(`Input value changed to: ${event.target.value}`);
+        });
+
+     </script>
+</body>
+</html>
