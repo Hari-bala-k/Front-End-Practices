@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events Types</title>
     <style>
+        body{
+            height: 300vh;
+        }
         div {
             height: 100px;
             width: 100px;
@@ -88,6 +91,19 @@
             console.log(`Input value changed to: ${event.target.value}`);
         });
 
+
+    // window events
+        window.addEventListener('load', () => {
+            console.log('Window loaded');
+        });
+
+        window.addEventListener('resize', () => {
+            console.log(`Window resized to: ${window.innerWidth} x ${window.innerHeight}`);
+        });
+
+        window.addEventListener('scroll', () => {
+            console.log(`Window scrolled to: ${window.scrollY}`);
+        });
      </script>
 </body>
 </html>
