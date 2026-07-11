@@ -28,6 +28,14 @@
         });
 
         const regex = /^[a-zA-Z]+$/; // Regular expression for letters only
+
+        nameInput.addEventListener('input', () => {
+            if (!regex.test(nameInput.value)) {
+                nameInput.setCustomValidity('Name must contain letters only.');
+            } else {
+                nameInput.setCustomValidity('');
+            }
+        });
      </script>
 </body>
 </html>
